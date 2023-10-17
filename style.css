@@ -74,6 +74,7 @@ section {
 
 .home {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 9%;
     background: url('home.jpg') no-repeat;
@@ -83,6 +84,7 @@ section {
 
 .home-content {
     max-width: 80rem;
+    text-align: center;
 }
 
 .home-content h1 {
