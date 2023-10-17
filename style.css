@@ -95,7 +95,6 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 70rem;
 }
 
 .home-content .text-animate h3 {
@@ -171,11 +170,10 @@ section {
 }
 
 .home-sci {
-    position: absolute;
-    bottom: 15rem;
-    width: 170px;
+    position: relative;
     display: flex;
     justify-content: space-between;
+    width: 170px;
 }
 
 .home-sci a {
