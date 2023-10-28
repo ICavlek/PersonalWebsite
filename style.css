@@ -79,10 +79,7 @@ section {
 
 .home {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 3rem;
     padding: 0 9%;
     background: url('home.jpg') no-repeat;
     background-size: cover;
@@ -90,8 +87,7 @@ section {
 }
 
 .home-content {
-    max-width: 100rem;
-    text-align: center;
+    max-width: 60rem;
 }
 
 .home-content h1 {
@@ -102,6 +98,7 @@ section {
 
 .home-content .text-animate {
     position: relative;
+    width: 70rem;
 }
 
 .home-content .text-animate h3 {
@@ -117,15 +114,15 @@ section {
     animation-delay: 2s;
 }
 
-.home-content .text-animate h3::before {
+.home-content .text-animate h3::before{
     content: '';
     position: absolute;
     top: 0;
-    left: 0%;
+    left: 0;
     width: 0;
     height: 100%;
     border-right: 2px solid var(--main-color);
-    z-index: -1;
+    z-index: 1;
 }
 
 .home-content p {
@@ -135,7 +132,7 @@ section {
 
 .btn-box {
     position: relative;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     width: 34.5rem;
     height: 5rem;
@@ -194,10 +191,11 @@ section {
 }
 
 .home-sci {
-    position: relative;
+    position: absolute;
+    bottom: 5rem;
+    width: 170px;
     display: flex;
     justify-content: space-between;
-    width: 170px;
 }
 
 .home-sci a {
@@ -794,9 +792,22 @@ span {
 
 @keyframes homeBgText {
     0%, 10%, 100% {
-        background-position: 18rem 0;
+        background-position: 0 0;
     }
     65%, 85% {
-        background-position: 81rem 0;
+        background-position: 40rem 0;
+    }
+}
+
+@keyframes homeCursorText {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    65%, 85% {
+        width: 100%;
+        opacity: 1;
+    }
+    75%, 81% {
+        opacity: 0;
     }
 }
