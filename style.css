@@ -267,6 +267,7 @@ section {
 }
 
 .heading {
+    position: relative;
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -278,8 +279,8 @@ span {
 
 .about-img {
     position: relative;
-    width: 25rem;
-    height: 25rem;
+    width: 32rem;
+    height: 32rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -287,7 +288,7 @@ span {
 }
 
 .about-img img {
-    width: 80%;
+    width: 62%;
     border-radius: 30%;
     border: .2rem solid var(--main-color);
 }
@@ -326,11 +327,13 @@ span {
 }
 
 .about-content h3 {
-    margin-top: 2rem;
+    position: relative;
+    display: inline-block;
     font-size: 2.6rem;
 }
 
 .about-content p {
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
@@ -679,6 +682,17 @@ span {
 .home.show-animate .animate {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
+}
+
+.animate.scroll {
+    transition: 1s ease;
+    transition-delay: calc(.3s / var(--i));
+    animation: none;
+}
+
+.about.show-animate .animate.scroll {
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
 }
 
 /* BREAKPOINTS */
